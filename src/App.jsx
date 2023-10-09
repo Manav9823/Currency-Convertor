@@ -11,8 +11,10 @@ function App() {
   const [converted, setConvertedAmount] = useState(0)
 
   const currencyInfo = useCurrencyInfo(from)
-
+  console.log('manav')
+  console.log(currencyInfo)  
   const options = Object.keys(currencyInfo)
+//   const options = {}  
   const swap = () =>{
     setFrom(to)
     setTo(from)
@@ -67,6 +69,7 @@ function App() {
                             setTo(amount)}
                             selectCurrency={from}
                             amountDisable
+
                         />
                     </div>
                     <button type="submit" className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg">
